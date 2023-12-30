@@ -1,0 +1,3 @@
+#docker build
+docker build -t image-angular-pn .
+docker run -dit --name angular-pn -p 8084:80 image-angular-pn

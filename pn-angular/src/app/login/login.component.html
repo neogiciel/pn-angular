@@ -1,0 +1,40 @@
+<body>
+    <app-top></app-top>
+    <div>
+    <!---------------------Page --------------------->        
+    <div align="center">
+    <form (ngSubmit)="onSubmitForm()">
+        <table border="0" background="#666666" cellspacing="4" cellpadding="4">
+         <tr>
+            <td width="100%">
+            <ng-container *ngIf="(error == 1);">
+                <div class="txtb-red ">{{ errorMessage }}</div> 
+            </ng-container>
+            </td>
+         </tr>
+          <tr>
+            <td width="100%">
+              <font class="titre">Login:</font><br>
+              <input type="txt" name="fLogin" class="forms" value="" [(ngModel)]="fLogin">
+            </td>
+          </tr>
+          <tr>
+            <td width="100%">
+              <font class="titre">Mot de Passe:</font><br>
+              <input type="password" name="fPassword" class="forms" value="" [(ngModel)]="fPassword">
+            </td>
+          </tr>
+          <tr>
+            <td colspan=1 align="center">
+              <input name="submit" type="Submit" value="    Valider   " class="bouton">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <!---------------------Page --------------------->        
+    </div>
+    <app-bottom></app-bottom>
+ </body>
+

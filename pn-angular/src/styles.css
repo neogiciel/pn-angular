@@ -1,0 +1,343 @@
+/*======= general =======*/
+body {
+  background-color: #FFFFFF;
+  font-weight: 480;
+  font-size: 1em;
+  font-family: 'Futura Bk',Arial,sans-serif;
+  font-size: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "top-menu"
+    "main"
+    "bottom";
+  grid-template-columns: auto ;
+  grid-template-rows: 100px auto 100px;
+  gap: 2px;
+}
+
+.child {
+margin: 5px;
+padding: 5px;
+background: #ffffff;
+border: 1px solid #ffffff;
+}
+
+.top-menu {
+    grid-area: top-menu;
+}
+.top-logo {
+    grid-area: top-logo;
+}
+.top-login {
+    grid-area: top-login;
+}
+
+.main {
+    grid-area: main;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+.carre {
+  background: #990000;
+  width: 40px;   
+  height: 40px;   
+}
+/*==============*/
+  .top-banner {
+    padding: 6px 0 6px 0;
+    background: #000000;
+    box-shadow: 1px 1px 3px #666666;
+  }
+  
+  .menu {
+    padding: 6px 0 6px 0;
+    background: #333333;
+    box-shadow: 1px 1px 3px #666666;
+    width: 260px;
+  }
+  
+  .menu-titre {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold
+  }
+  
+  
+  .txt {
+    font-weight: 480;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #666666;
+  }
+  
+  .txtb {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #666666;
+    font-weight: bold
+  }
+  
+  .txtb-red {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #990000;
+    font-weight: bold
+  }
+  
+  .titre {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222222;
+  }
+  
+  .titre-color {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF6600;
+  }
+  
+  .titre-bold {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666666;
+  }
+  
+  .lien {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FF6600
+  }
+  
+  a:hover {
+    color: #FFFFFF;
+    text-decoration: none
+  }
+  
+  a:link {
+    text-decoration: none
+  }
+  
+  a:visited {
+    text-decoration: none
+  }
+  
+  .red {
+    font-weight: 480;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF0000;
+  }
+  
+  .forms {
+    border: 1px #FF6600 solid;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 0 6px 0;
+    background-color: #FFFFFF;
+    color: #666666
+  }
+  
+  .bouton {
+    padding: 4px 0 4px 0;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    background: #f5f5f5;
+    color: #222222;
+    border-radius: 4px;
+    width: 100px;
+    border: 1px solid #999999;
+    box-shadow: 1px 1px 4px #666666;
+  }
+  
+  
+  
+  /*======= tableau =======*/
+  .tabborder {
+    border: 1px solid #999999;
+    box-shadow: 1px 1px 3px #666666;
+  }
+  
+  .tabtitre {
+    font-weight: 480;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-size: 14px;
+    background-color: #003D7C;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold
+  }
+  
+  .tabtitre-small {
+    font-weight: 480;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-size: 12px;
+    background-color: #492D1F;
+    color: #FFFFFF;
+    font-weight: bold
+  }
+  
+  .tabcell {
+    font-weight: 480;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-size: 14px;
+    background-color: #D6D6D6;
+    color: #202020;
+  }
+  
+  .tabcell-upper {
+    font-weight: 400;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 16px;
+    background-color: #D6D6D6;
+    color: #202020;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  
+  .tabcell -bouton {
+    background-color: #D6D6D6;
+    ;
+    align-content: center;
+  }
+  
+  .tabcell-big {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 18px;
+    background-color: #D6D6D6;
+    color: #222222;
+  }
+  
+  .tablien {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #D6D6D6;
+    color: #202020;
+    font-weight: bold
+  }
+  
+  .tabnav {
+    font-weight: 480;
+    font-family: 'Futura Bk',Arial,sans-serif;
+    font-size: 12px;
+    background-color: #ADC642;
+    color: #FFFFFF;
+    font-weight: bold
+  }
+  
+    .tabnav a:hover {
+      color: #FFFFFF;
+      text-decoration: none
+    }
+  
+    .tabnav a:link {
+      text-decoration: none
+    }
+  
+    .tabnav a:visited {
+      text-decoration: none
+    }
+  
+  /*======= mail =======*/
+  .mail-body {
+    background-color: #FFFFFF;
+    font-weight: 480;
+    font-size: 0.8em;
+    font-family: 'Futura Lt',Arial,sans-serif;
+    font-size: 1em;
+  }
+  
+  .mail-container {
+    border: 2px #000000 dotted;
+  }
+  
+  .mail-txt {
+    font-weight: 480;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: #202020
+  }
+  
+  .mail-titre {
+    font-weight: 480;
+    font-family: 'Futura Md',Arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #514946;
+  }
+  
+  .mail-titre-big {
+    font-weight: 480;
+    font-family: 'Futura Md',Arial,sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #514946;
+  }
+  
+  .mail-titre-red-big {
+    font-weight: 480;
+    font-family: 'Futura Md',Arial,sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF0000;
+  }
+  
+  .mail-tablien-ok {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: bold
+  }
+  
+    .mail-tablien-ok:hover {
+      color: #FF6600;
+    }
+  
+    .mail-tablien-ok:visited {
+      color: #FFFFFF;
+    }
+  
+  .mail-tablien-nok {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #202020;
+    font-weight: bold
+  }
+  
+    .mail-tablien-nok:hover {
+      color: #FF6600;
+    }
+  
+    .mail-tablien-nok:visited {
+      color: #202020;
+    }
+  
+  /*======= general =======*/
+  
