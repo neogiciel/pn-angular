@@ -30,7 +30,7 @@ export class ListeserviceComponent {
 
   getData(){
     // Mettre ici le code à exécuter lors de l'initialisation du composant
-    console.log('url = '+this.url);
+    console.log('[getData] url = '+this.urlapi);
     this.token = localStorage.getItem('access_token') || this.token;
     this.refreshtoken = localStorage.getItem('refresh_token') || this.refreshtoken;
     //console.log('token = '+this.token);
@@ -68,6 +68,9 @@ export class ListeserviceComponent {
                 localStorage.removeItem("password");
                 localStorage.removeItem("access_token");
                 localStorage.removeItem("refresh_token");
+                console.log("Redirect URL"); 
+                this.router.navigate(['/']);
+            
               }
              );
 
@@ -79,6 +82,9 @@ export class ListeserviceComponent {
             localStorage.removeItem("password");
             localStorage.removeItem("access_token");
             localStorage.removeItem("refresh_token");
+            console.log("Redirect URL"); 
+            this.router.navigate(['/']);
+        
           }
         );   
       });
