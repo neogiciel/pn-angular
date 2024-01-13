@@ -14,4 +14,4 @@ spec:
           service:
             name: angular-pn-k8s-svc
             port:
-              number: 8084
+              number: 8080
