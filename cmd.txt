@@ -1,8 +1,20 @@
 #docker build
-docker build -t image-angular-pn .
-docker run -dit --name angular-pn -p 8084:80 image-angular-pn
+docker build -t neogicel/image-angular-pn .
+docker tag neogicel/image-angular-pn:4.0
+docker run -dit --name angular-pn -p 8084:80 neogicel/image-angular-pn
+
+#build
+docker build --tag "neogicel/quarkus-api-pn.jar:1.0" .
+#run
+docker run -p 8089:8089 neogicel/quarkus-api-pn.jar:1.0
+#push
+docker push neogicel/quarkus-api-pn.jar:1.0
+
+#commande dans un pod
+kubectl logs quarkus-api-pn-k8s-7fd7cd445f-67cmd 
+kubectl exec -it quarkus-api-pn-k8s-7fd7cd445f-67cmd  -- sh
 
 #concourse
 D:\concourse\fly.exe --target=tutorial login --concourse-url=http://127.0.0.1:9000 --username=test --password=test
 D:\concourse\fly.exe --target=tutorial sync
-D:\concourse\fly.exe -t tutorial set-pipeline -p pn-angular -c ci/kube.yml
+D:\concourse\fly.exe -t tutorial set-pipeline -p pn-angular -c ci/kube.yaml
