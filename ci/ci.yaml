@@ -18,7 +18,7 @@ spec:
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080 
+            - containerPort: 8084 
 ---
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
@@ -33,8 +33,8 @@ spec:
     app: angular-pn-k8s
   ports:
     - protocol: "TCP"
-      port: 8080 # The port that the service is running on in the cluster
-      targetPort: 8080 # The port exposed by the service
+      port: 8084 # The port that the service is running on in the cluster
+      targetPort: 8084 # The port exposed by the service
   type: NodePort # type of the service.
 ---
 apiVersion: networking.k8s.io/v1
@@ -53,4 +53,4 @@ spec:
           service:
             name: angular-pn-k8s-svc
             port:
-              number: 8080
+              number: 8084

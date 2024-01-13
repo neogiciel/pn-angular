@@ -1,6 +1,5 @@
 #-----------------------------------------
 # kubectl proxy --port=8080 & 
-# kubectl proxy --port=9000 & 
 #-----------------------------------------
 resource_types:
 - name: kubernetes
