@@ -1,0 +1,49 @@
+<body>
+    <app-top></app-top>
+    <div>
+    <!---------------------Page --------------------->        
+    <div align="left">
+
+     <span class="titre">Liste des employees:</span><br> 
+      <table border="0" cellspacing="4" cellpadding="4">
+        <tr>
+          <td class="tabtitre">&nbsp;ID</td>
+          <td class="tabtitre" nowrap>Prenom</td>
+          <td class="tabtitre" nowrap>Nom</td>
+          <td class="tabtitre" nowrap>Age</td>
+          <td class="tabtitre">&nbsp;</td>
+        </tr>
+
+        
+        <ng-container *ngFor="let element of liste">
+
+          <tr>
+            <td class="tabcell" valign="top">&nbsp;<img src="./assets/pix/tree.gif" width="8" height="13">&nbsp;{{element.id}}</td>
+            <td class="tabcell" valign="top">&nbsp;{{element.prenon}}</td>
+            <td class="tabcell" valign="top">&nbsp;{{element.nom}}</td>
+            <td class="tabcell" valign="top">&nbsp;{{element.age}}</td>
+            <td class="tabcell" valign="top" align="center">
+              <a href="delete" class="tablien"><img src="./assets/pix/tab-delete.png" height="20"></a>
+            </td>
+          </tr>
+       
+        </ng-container>
+        
+        </table>
+
+    
+  </div>
+  
+  
+  
+  <div align="left">
+  <br>
+  <a routerLink="/home" class="bouton" ><input name="submit" type="Submit" value="    Retour   " class="bouton"></a>
+  <br>
+  <br>
+  </div>    
+  <!---------------------Page --------------------->        
+   </div>
+    <app-bottom></app-bottom>
+ </body>
+

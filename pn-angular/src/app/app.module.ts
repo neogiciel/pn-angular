@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -15,9 +13,9 @@ import { TopComponent } from './top/top.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { MenuComponent } from './menu/menu.component';
 import { TestComponent } from './test/test.component';
-import { GatewayComponent } from './gateway/gateway.component';
-import { LocalComponent } from './local/local.component';
-import { SecuriteComponent } from './securite/securite.component';
+import { ListepersonneComponent } from './entreprise/listepersonne.component';
+import { PersonneComponent } from './entreprise/personne.component';
+import { ListeserviceComponent } from './entreprise/listeservice.component';
 
 
 @NgModule({
@@ -29,9 +27,9 @@ import { SecuriteComponent } from './securite/securite.component';
     BottomComponent,
     MenuComponent,
     TestComponent,
-    GatewayComponent,
-    LocalComponent,
-    SecuriteComponent,
+    PersonneComponent,
+    ListepersonneComponent,
+    ListeserviceComponent,
   ],
   imports: [
     BrowserModule,

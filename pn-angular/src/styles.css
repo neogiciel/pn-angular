@@ -177,167 +177,75 @@ border: 1px solid #ffffff;
   
   
   /*======= tableau =======*/
-  .tabborder {
-    border: 1px solid #999999;
-    box-shadow: 1px 1px 3px #666666;
-  }
-  
-  .tabtitre {
-    font-weight: 480;
-    font-family: 'Futura Lt',Arial,sans-serif;
-    font-size: 14px;
-    background-color: #003D7C;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-weight: bold
-  }
-  
-  .tabtitre-small {
-    font-weight: 480;
-    font-family: 'Futura Lt',Arial,sans-serif;
-    font-size: 12px;
-    background-color: #492D1F;
-    color: #FFFFFF;
-    font-weight: bold
-  }
-  
-  .tabcell {
-    font-weight: 480;
-    font-family: 'Futura Lt',Arial,sans-serif;
-    font-size: 14px;
-    background-color: #D6D6D6;
-    color: #202020;
-  }
-  
-  .tabcell-upper {
-    font-weight: 400;
-    font-family: 'Futura Bk',Arial,sans-serif;
-    font-size: 16px;
-    background-color: #D6D6D6;
-    color: #202020;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  
-  .tabcell -bouton {
-    background-color: #D6D6D6;
-    ;
-    align-content: center;
-  }
-  
-  .tabcell-big {
-    font-weight: 480;
-    font-family: 'Futura Bk',Arial,sans-serif;
-    font-size: 18px;
-    background-color: #D6D6D6;
-    color: #222222;
-  }
-  
-  .tablien {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    background-color: #D6D6D6;
-    color: #202020;
-    font-weight: bold
-  }
-  
-  .tabnav {
-    font-weight: 480;
-    font-family: 'Futura Bk',Arial,sans-serif;
-    font-size: 12px;
-    background-color: #ADC642;
-    color: #FFFFFF;
-    font-weight: bold
-  }
-  
-    .tabnav a:hover {
-      color: #FFFFFF;
-      text-decoration: none
-    }
-  
-    .tabnav a:link {
-      text-decoration: none
-    }
-  
-    .tabnav a:visited {
-      text-decoration: none
-    }
-  
-  /*======= mail =======*/
-  .mail-body {
-    background-color: #FFFFFF;
-    font-weight: 480;
-    font-size: 0.8em;
-    font-family: 'Futura Lt',Arial,sans-serif;
-    font-size: 1em;
-  }
-  
-  .mail-container {
-    border: 2px #000000 dotted;
-  }
-  
-  .mail-txt {
-    font-weight: 480;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    color: #202020
-  }
-  
-  .mail-titre {
-    font-weight: 480;
-    font-family: 'Futura Md',Arial,sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #514946;
-  }
-  
-  .mail-titre-big {
-    font-weight: 480;
-    font-family: 'Futura Md',Arial,sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #514946;
-  }
-  
-  .mail-titre-red-big {
-    font-weight: 480;
-    font-family: 'Futura Md',Arial,sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #FF0000;
-  }
-  
-  .mail-tablien-ok {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #FFFFFF;
-    font-weight: bold
-  }
-  
-    .mail-tablien-ok:hover {
-      color: #FF6600;
-    }
-  
-    .mail-tablien-ok:visited {
-      color: #FFFFFF;
-    }
-  
-  .mail-tablien-nok {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #202020;
-    font-weight: bold
-  }
-  
-    .mail-tablien-nok:hover {
-      color: #FF6600;
-    }
-  
-    .mail-tablien-nok:visited {
-      color: #202020;
-    }
-  
-  /*======= general =======*/
-  
+.tabborder {
+	border:1px solid #999999;
+	box-shadow:1px 1px 3px #666666;
+}
+.tabtitre {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:14px;
+	background-color: #000000;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-weight:bold
+}
+.tabtitre-small {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:12px;
+	background-color: #492D1F;
+	color: #FFFFFF;
+	font-weight:bold
+}
+.tabcell {
+	font-weight:480;
+	font-family:'Futura Lt',Arial,sans-serif;
+	font-size:14px;
+	background-color: #D6D6D6;
+	color: #202020;
+}
+
+.tabcell-upper {
+	font-weight:400;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:16px;
+	background-color: #D6D6D6;
+	color: #202020;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+
+.tabcell -bouton{
+	background-color: #D6D6D6;;
+	align-content: center;
+}
+
+.tabcell-big {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:18px;
+	background-color: #D6D6D6;
+	color: #222222;
+}
+
+.tablien {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	background-color: #D6D6D6;
+	color: #202020;
+	font-weight:bold
+}
+
+.tabnav {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:12px;
+	background-color: #ADC642;
+	color: #FFFFFF;
+	font-weight: bold
+}
+.tabnav a:hover { color: #FFFFFF; text-decoration: none }
+.tabnav a:link { text-decoration: none }
+.tabnav a:visited { text-decoration: none }

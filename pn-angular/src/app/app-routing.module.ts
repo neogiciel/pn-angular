@@ -3,17 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
-import { GatewayComponent } from './gateway/gateway.component';
-import { LocalComponent } from './local/local.component';
-import { SecuriteComponent } from './securite/securite.component';
+import { ListepersonneComponent } from './entreprise/listepersonne.component';
+import { PersonneComponent } from './entreprise/personne.component';
+import { ListeserviceComponent } from './entreprise/listeservice.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent, },
   { path: 'home', component: HomeComponent },
   { path: 'test', component: TestComponent },
-  { path: 'gateway', component: GatewayComponent },
-  { path: 'local', component: LocalComponent },
-  { path: 'securite', component: SecuriteComponent },
+  { path: 'listepersonne', component: ListepersonneComponent },
+  { path: 'personne', component: PersonneComponent },
+  { path: 'listeservice', component: ListeserviceComponent },
+
 ];
 
 

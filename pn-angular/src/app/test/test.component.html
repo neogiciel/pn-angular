@@ -1,34 +1,70 @@
 <body>
-    <app-top></app-top>
-    <div>
-    <!---------------------Page --------------------->        
-    <div align="left">
+  <app-top></app-top>
+  <div>
+  <!---------------------Page --------------------->        
+  <div align="left">
+ <form (ngSubmit)="onSubmitForm()">
+  <span class="titre">Test d une Gateway Simple:</span><br> 
+  <table border="0" cellspacing="4" cellpadding="4">
+        <tr>
+          <td >
+            <font class="txt">Url :</font>:
+            <input type="txt" name="fUrl" class="forms" value="http://gw1.neogiciel.com" [(ngModel)]="fUrl">
+          </td>
+          <td >
+            <font class="txt">Path:</font>
+            <input type="txt" name="fPath" class="forms" value="/test" [(ngModel)]="fPath">
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2 align="left">
+           Exemple d'url traitées:<br>
+           http://gw1.neogiciel.com<br>
+           http://dev1.neogiciel.com<br>
+           http://dev2.neogiciel.com<br>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2 align="center">
+            <input name="submit" type="Submit" value="    Valider   " class="bouton">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div align="left">
+  
+ <span class="titre">Reponse Requete :</span>
+  <ng-container *ngIf="(error == 0);"><img src="./assets/pix/picto-yes.png" width="40px"><br>
+     {{ displayUrl }}
+  <table border="0" bgColor="#DDDDDD" cellspacing="4" cellpadding="4"  width="60%">
+      <tr><td>
+        <div class="txtb ">{{ displayResponse }}</div> 
+    </td></tr>
+  </table>
+  </ng-container>
 
-    <H1>Test de la Gateway</H1>  
-    <form (ngSubmit)="onSubmitForm()">
-        <table border="0" cellspacing="4" cellpadding="4">
-          <tr>
-            <td width="100%">
-              <font class="txt">Url :</font>:
-              <input type="txt" name="fUrl" class="forms" value="http://gw1.neogiciel.com" [(ngModel)]="fUrl">
-            </td>
-          </tr>
-          <tr>
-            <td width="100%">
-              <font class="txt">Path:</font>
-              <input type="txt" name="fPath" class="forms" value="/test" [(ngModel)]="fPath">
-            </td>
-          </tr>
-          <tr>
-            <td colspan=1 align="center">
-              <input name="submit" type="Submit" value="    Valider   " class="bouton">
-            </td>
-          </tr>
-        </table>
-      </form>
-    </div>
-    <!---------------------Page --------------------->        
-    </div>
-    <app-bottom></app-bottom>
- </body>
+  <ng-container *ngIf="(error == 1);"><img src="./assets/pix/picto-no.png" width="40px"><br>
+    {{ displayUrl }}
+ <table border="0" bgColor="#DDDDDD" cellspacing="4" cellpadding="4"  width="60%">
+     <tr><td>
+       <div class="txtb ">{{ displayResponse }}</div> 
+   </td></tr>
+ </table>
+ </ng-container>
+
+
+ <div align="left">
+ <br>
+ <a routerLink="/home" class="bouton" ><input name="submit" type="Submit" value="    Retour   " class="bouton"></a>
+ <br>
+ <br>
+ </div>    
+
+  
+  </div>    
+  <!---------------------Page --------------------->        
+  </div>
+  <app-bottom></app-bottom>
+</body>
 

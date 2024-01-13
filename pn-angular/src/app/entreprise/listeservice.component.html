@@ -1,0 +1,45 @@
+<body>
+    <app-top></app-top>
+    <div>
+    <!---------------------Page --------------------->        
+    <div align="left">
+
+     <span class="titre">Liste des Services:</span><br> 
+      <table border="0" cellspacing="4" cellpadding="4">
+        <tr>
+          <td class="tabtitre">&nbsp;ID</td>
+          <td class="tabtitre" nowrap>Service</td>
+          <td class="tabtitre" nowrap></td>
+        </tr>
+
+        
+        <ng-container *ngFor="let element of liste">
+
+          <tr>
+            <td class="tabcell" valign="top">&nbsp;<img src="./assets/pix/tree.gif" width="8" height="13">&nbsp;{{element.idservice}}</td>
+            <td class="tabcell" valign="top">&nbsp;{{element.label}}</td>
+            <td class="tabcell" valign="top" align="center">
+              <a href="delete" class="tablien"><img src="./assets/pix/tab-mod.png" height="20"></a>
+            </td>
+          </tr>
+       
+        </ng-container>
+        
+        </table>
+
+    
+  </div>
+  
+  
+  
+  <div align="left">
+  <br>
+  <a routerLink="/home" class="bouton" ><input name="submit" type="Submit" value="    Retour   " class="bouton"></a>
+  <br>
+  <br>
+  </div>    
+  <!---------------------Page --------------------->        
+   </div>
+    <app-bottom></app-bottom>
+ </body>
+
