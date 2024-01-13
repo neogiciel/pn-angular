@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: angular-pn-k8s
-          image: neogicel/image-angular-pn:2.0
+          image: neogicel/image-angular-pn:4.0
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8084 
+            - containerPort: 80 
 

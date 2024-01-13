@@ -1,56 +1,53 @@
-#-----------------------------------------
-# kubectl proxy --port=8080 & 
-#-----------------------------------------
-resource_types:
-- name: kubernetes
-  type: docker-image
-  source: 
-    repository: jmkarthik/concourse-kubectl-resource
-    tag: latest
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: angular-pn-k8s
+spec:
+  selector:
+    matchLabels:
+      app: angular-pn-k8s
+  replicas: 1 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: angular-pn-k8s
+    spec:
+      containers:
+        - name: angular-pn-k8s
+          image: neogicel/image-angular-pn:4.0
+# Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80 
+---
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: angular-pn-k8s-svc
+spec:
+  selector:
+    app: angular-pn-k8s
+  ports:
+    - protocol: "TCP"
+      port: 80 # The port that the service is running on in the cluster
+      targetPort: 80 # The port exposed by the service
+  type: NodePort # type of the service.
 
-resources:
-- name: git-angular
-  type: git
-  source:
-    uri: https://github.com/neogiciel/pn-angular.git
-
-- name: docker-angular-pn
-  type: docker-image
-  source:
-      repository: neogicel/image-angular-pn
-      tag: '2.0'
-      username: neogicel
-      password: Patrice88$
-
-- name: k8s-cluster
-  type: kubernetes
-  source:
-    api_server_uri: http://dev.neogiciel.com
-    #api_server_uri: http://192.168.1.72
-    namespace: default
-    certificate_authority_data: MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5pa3ViZUNBMB4XDTIzMTEyMjE3NDcyMFoXDTMzMTEyMDE3NDcyMFowFTETMBEGA1UEAxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOU0ZoIvjH7jPcqaE76iMbrH04isxjQRuD7ZQ9J6A0Nu3taVnDQ96OYSFcjdHTDqnxxWnoNzEtIzpY4csXJP740teEPZJZKu4YkAOinVPuYAV+xfuuiYTGOyuiF924jwmZMExbPz0GQxXyaKR19dSNe0uKsSwxk8aaZSfv0xzE7kMLE44/5d/FxifEpgi8j54cZA4H5EgzJAE6xZdH26x2EouwjKREhXev0VHlAm2tJoxfb+BXAwbjDHFoEduZmvTYrUmq3SURHNpoXpIRdGndzr8KuQnK/xgs2xKcmrfPHwtCZYYUMCVsP1E7ph3Hz8TPv5GNqNdEUMd1VOPyu6FSECAwEAAaNhMF8wDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTkvg5kTbS23/pRNzZmrU+5HQpmSzANBgkqhkiG9w0BAQsFAAOCAQEA171yfyfWRwVycqgrfulidfqM4jQ9bTIl7rtU02jpX2JHfqbGBYKAvUYo3gJxLfKA6gCFfWv8DMEkGPqLteZwJ9GCCIHi+3kFFOZHOF1B4wZEX+aXZPEUTho0idb40lxqeMKxnYfEiPRzxejbMWwXOS4L+ttWV/warDfxKG8wE/I2bO+xpQtJGc5EFKep6YiRvLB0jj1fwUvKQfE74W+NAjtwWt1DDaMxNEpGKQ5b7OisPLCHLBYgH7cnB2LCh4khKml9HKT5UzHW3gYp7YiIt9PIzRnsd3mDrBpdawWtNfeSEPdAeoSgEuMGmUkwhgARGmSkQGS8lp8/x+sIiraSRQ==
-    token: cdGn9MCv3GjNKYjXzBbLnB8sseqWr5dlAAAAAA
-
-jobs:
-- name : build
-  public: true
-  serial: true
-  plan:
-  - get: git-angular
-    trigger: true
-  - put: docker-angular-pn
-    params:
-        build: git-angular
-
-- name: deploy
-  public: true
-  serial: false
-  plan:
-      - get: git-angular
-        trigger: true
-        passed: [build]
-      - put: k8s-cluster
-        params:
-          status_check_timeout: 60
-          command_timeout: 30
-          file: "git-angular/ci/ci.yaml"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: angular-pn-k8s-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /pn
+        pathType: Prefix
+        backend:
+          service:
+            name: angular-pn-k8s-svc
+            port:
+              number: 80
