@@ -53,4 +53,4 @@ jobs:
         params:
           status_check_timeout: 60
           command_timeout: 30
-          file: "git-angular/ci/ci.yaml"
+          file: "git-angular/ci/kube.yaml"

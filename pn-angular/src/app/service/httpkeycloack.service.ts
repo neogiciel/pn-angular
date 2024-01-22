@@ -17,7 +17,7 @@ export class HttpKeycloack {
 		this.url = "http://gw2.neogiciel.com";
 		this.client_id = "application-test";
 		this.grant_type = "password";
-		this.client_secret = "crGUrhH07XRrB2dYzGRg51KXpBYaVSKz";
+		this.client_secret = "qNjyFMmpRKtPafLhODI0S8863SXm8Fis";
 		
 	}
 		
