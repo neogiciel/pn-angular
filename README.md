@@ -2,7 +2,7 @@
 ***
 <table>
   <tr>
-    <td><img src="https://www.mag-corp.com/wp-content/uploads/2021/08/angular.png" alt="drawing" height="280px"/></td>
+    <td><img src="https://www.mag-corp.com/wp-content/uploads/2021/08/angular.png" alt="drawing" height="260px"/></td>
   </tr>
 </table>
 
