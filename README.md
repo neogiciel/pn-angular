@@ -8,7 +8,7 @@
 
 ## Informations Générales
 ***
-Mise en place d'un broker Rabit MQ permettan la gestion de message Asynchrone
+Mise en place d'une application Angular JS utilisant la sécurité Oauth2
 
 ## Technologies
 ***
