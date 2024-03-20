@@ -1,9 +1,8 @@
-﻿## <h1>Application Spring Boot Rabbit MQ</h1>
+﻿## <h1>Application Angular JS</h1>
 ***
 <table>
   <tr>
-    <td><img src="https://blog.mossroy.fr/wp-content/uploads/2019/09/spring-boot-logo.png" alt="drawing" height="280px"/></td>
-    <td><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/rabbitmq_logo_icon_170812.png" alt="drawing" height="280px"/></td>
+    <td><img src="https://www.mag-corp.com/wp-content/uploads/2021/08/angular.png" alt="drawing" height="280px"/></td>
   </tr>
 </table>
 
